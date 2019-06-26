@@ -1,0 +1,12 @@
+{"_id":{"$oid":"5cdf26cdd06e98051c10b654"},"type":"string","key":"googleMapsApiKey","value":"","__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5cdf26cdd06e98051c10b655"},"type":"boolean","key":"cash","value":false,"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5cdf26cdd06e98051c10b656"},"type":"boolean","key":"stripe","value":true,"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5cdf26cdd06e98051c10b657"},"type":"boolean","key":"enableGoogle","value":true,"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5cdf26cdd06e98051c10b658"},"type":"boolean","key":"enableFacebook","value":true,"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5cdf26cdd06e98051c10b65a"},"type":"object","key":"tripPrice","value":{"farePerMin":{"$numberInt":"2"},"farePerKm":{"$numberInt":"7"},"baseFare":{"$numberInt":"10"},"currencySymbol":"$"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5cdf26cdd06e98051c10b65b"},"type":"object","key":"googleAuth","value":{"authToken":""},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5cdf26cdd06e98051c10b65c"},"type":"object","key":"facebookAuth","value":{"authToken":""},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5cdf26cdd06e98051c10b65d"},"type":"object","key":"sendConfig","value":{"email":{"onForgotPassword":true,"onRegistrationRider":true,"onRegistrationDriver":true,"onEndTripRider":true,"onEndTripDriver":true,"rideAcceptRider":true},"sms":{"onEndTripRider":true,"onEndTripDriver":true,"rideAcceptRider":true}},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5cdf26cdd06e98051c10b65e"},"type":"object","key":"approveConfig","value":{"autoApproveRider":true,"autoApproveDriver":true},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5cdfadb7d3ea1500174c4b22"},"type":"Number","key":"version","value":{"$numberInt":"14"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5cdf26cdd06e98051c10b659"},"type":"object","key":"stripeConfig","value":{"stripekey":""},"__v":{"$numberInt":"0"}}
