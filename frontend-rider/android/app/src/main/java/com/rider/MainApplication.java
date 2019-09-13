@@ -1,4 +1,4 @@
-package com.crowdbotics.temp.apps.taxiapprider;
+package com.rider;
 
 import android.app.Application;
 
@@ -24,7 +24,7 @@ import java.util.List;
 
 public class MainApplication extends Application implements ReactApplication {
 
-  private static CallbackManager mCallbackManager = CallbackManager.Factory.create();
+ private static CallbackManager mCallbackManager = CallbackManager.Factory.create();
 
   protected static CallbackManager getCallbackManager() {
       return mCallbackManager;
@@ -42,15 +42,15 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
-            new RNSentryPackage(),
-            // new BackgroundGeolocationPackage(),
-            new SplashScreenReactPackage(),
-            new VectorIconsPackage(),
-            new ImagePickerPackage(),
-            new ReactNativeOneSignalPackage(),
-            new MapsPackage(),
-            new RNGoogleSignInPackage(), 
-            new FBSDKPackage(mCallbackManager)
+          new RNSentryPackage(),
+          // new BackgroundGeolocationPackage(),
+          new SplashScreenReactPackage(),
+          new VectorIconsPackage(),
+          new ImagePickerPackage(),
+          new ReactNativeOneSignalPackage(),
+          new MapsPackage(),
+          new RNGoogleSignInPackage(), 
+          new FBSDKPackage(mCallbackManager)
       );
     }
 

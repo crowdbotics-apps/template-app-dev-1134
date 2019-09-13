@@ -14,8 +14,8 @@
 		"moment": "^2.22.2",
 		"native-base": "2.10.0",
 		"prop-types": "^15.6.2",
-		"react": "16.7.0",
-		"react-native": "0.57.8",
+		"react": "16.8.3",
+		"react-native": "0.59.8",
 		"react-native-communications": "^2.2.1",
 		"react-native-country-picker-modal": "0.6.2",
 		"react-native-credit-card-input": "0.4.1",
@@ -24,7 +24,7 @@
 		"react-native-google-sign-in": "^1.0.16",
 		"react-native-i18n": "^2.0.15",
 		"react-native-image-picker": "^0.27.2",
-		"react-native-maps": "^0.22.1",
+		"react-native-maps": "^0.24.2",
 		"react-native-mauron85-background-geolocation": "^0.5.0-alpha.42",
 		"react-native-modalbox": "^1.6.0",
 		"react-native-onesignal": "^3.2.7",
@@ -34,6 +34,7 @@
 		"react-native-splash-screen": "^3.1.1",
 		"react-native-vector-icons": "6.1.0",
 		"react-redux": "^6.0.0",
+		"react-timer-mixin": "^0.13.4",
 		"redux": "^4.0.0",
 		"redux-form": "8.1.0",
 		"redux-logger": "^3.0.6",
@@ -46,7 +47,7 @@
 	},
 	"devDependencies": {
 		"babel-eslint": "^10.0.1",
-		"babel-jest": "23.6.0",
+		"babel-jest": "^24.8.0",
 		"babel-preset-react-native": "4.0.1",
 		"eslint": "^5.6.1",
 		"eslint-config-airbnb": "17.1.0",
@@ -58,10 +59,10 @@
 		"eslint-plugin-prettier": "^3.0.0",
 		"eslint-plugin-react": "^7.11.1",
 		"eslint-plugin-react-native": "^3.3.0",
-		"jest": "23.6.0",
+		"jest": "^24.8.0",
 		"jest-react-native": "18.0.0",
-		"metro-react-native-babel-preset": "0.51.1",
-		"react-test-renderer": "16.7.0"
+		"metro-react-native-babel-preset": "^0.54.0",
+		"react-test-renderer": "16.8.3"
 	},
 	"jest": {
 		"preset": "react-native"

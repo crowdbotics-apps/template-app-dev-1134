@@ -1,4 +1,4 @@
-package com.crowdbotics.temp.apps.taxiapprider; // make sure this is right for you package.
+package com.rider; // make sure this is right for you package.
 
 import android.content.Intent;
 import android.os.Bundle;

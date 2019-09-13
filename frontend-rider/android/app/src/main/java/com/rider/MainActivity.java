@@ -1,4 +1,4 @@
-package com.crowdbotics.temp.apps.taxiapprider;
+package com.rider;
 
 import android.os.Bundle;
 // import org.devio.rn.splashscreen.SplashScreen;
@@ -28,5 +28,5 @@ public class MainActivity extends ReactActivity {
         super.onActivityResult(requestCode, resultCode, data);
         MainApplication.getCallbackManager().onActivityResult(requestCode, resultCode, data);
     }
-
+    
 }

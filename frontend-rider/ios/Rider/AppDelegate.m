@@ -29,13 +29,12 @@
 
   NSURL *jsCodeLocation;
 
-  // jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index" fallbackResource:nil];
-   #ifdef DEBUG
-  jsCodeLocation = [NSURL URLWithString:@"http://192.168.0.4:8081/index.bundle?platform=ios&dev=true"];
+  #ifdef DEBUG
+    jsCodeLocation = [NSURL URLWithString:@"http://192.168.0.3:8081/index.bundle?platform=ios&dev=true"];
   #else
-  jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index" fallbackResource:nil];
+    jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index" fallbackResource:nil];
   #endif
-RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
+  RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
                                                       moduleName:@"Rider"
                                                initialProperties:nil
                                                    launchOptions:launchOptions];
@@ -45,9 +44,6 @@ RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
   rootViewController.view = rootView;
   self.window.rootViewController = rootViewController;
   [self.window makeKeyAndVisible];
-  
-  // [[FBSDKApplicationDelegate sharedInstance] application:application
-  //   didFinishLaunchingWithOptions:launchOptions];
   return YES;
 }
 

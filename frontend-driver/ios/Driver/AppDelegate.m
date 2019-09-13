@@ -7,6 +7,7 @@
 
 #import "AppDelegate.h"
 
+#import <React/RCTBridge.h>
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
 
@@ -27,15 +28,22 @@
   [GMSServices provideAPIKey:@"YOUR_GOOGLE_API_KEY"];
 
   NSURL *jsCodeLocation;
-    #ifdef DEBUG
-  jsCodeLocation = [NSURL URLWithString:@"http://192.168.0.4:8081/index.bundle?platform=ios&dev=true"];
-    #else
-  jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index" fallbackResource:nil];
+  #ifdef DEBUG
+    jsCodeLocation = [NSURL URLWithString:@"http://192.168.0.3:8081/index.bundle?platform=ios&dev=true"];
+  #else
+    jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index" fallbackResource:nil];
   #endif
-RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
+  RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
                                                       moduleName:@"Driver"
                                                initialProperties:nil
                                                    launchOptions:launchOptions];
+
+
+  // RCTBridge *bridge = [[RCTBridge alloc] initWithDelegate:self launchOptions:launchOptions];
+  // RCTRootView *rootView = [[RCTRootView alloc] initWithBridge:bridge
+  //                                                  moduleName:@"Driver"
+  //                                           initialProperties:nil];
+
   rootView.backgroundColor = [[UIColor alloc] initWithRed:1.0f green:1.0f blue:1.0f alpha:1];
   self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
   UIViewController *rootViewController = [UIViewController new];
@@ -43,9 +51,16 @@ RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
   self.window.rootViewController = rootViewController;
   [self.window makeKeyAndVisible];
 
-  // [[FBSDKApplicationDelegate sharedInstance] application:application
-  //   didFinishLaunchingWithOptions:launchOptions];
   return YES;
+}
+
+- (NSURL *)sourceURLForBridge:(RCTBridge *)bridge
+{
+#if DEBUG
+  return [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index" fallbackResource:nil];
+#else
+  return [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
+#endif
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
